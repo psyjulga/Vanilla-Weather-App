@@ -1,11 +1,16 @@
+body {
+  background-color: rgb(203, 225, 238);
+}
+
 .weather-app {
-  border: 2px solid rgb(58, 171, 236);
+  background-color: rgb(153, 209, 228);
+  border: 3px solid rgb(58, 171, 236);
   border-radius: 5px;
 }
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 
 ul {
