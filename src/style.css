@@ -1,5 +1,8 @@
 body {
   background-color: rgb(203, 225, 238);
+  background-image: url(sunny.jpg);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .weather-app {
@@ -9,7 +12,7 @@ body {
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 500px;
   margin: 50px auto;
 }
 
@@ -20,11 +23,36 @@ ul {
 #icon {
   width: 70px;
   position: relative;
-  left: 30px;
+  left: 20px;
+}
+
+#output-one {
+  font-weight: bold;
+}
+
+#output-two {
+  font-size: 15px;
 }
 
 #city-and-temp {
   font-size: 26px;
+}
+
+#celsius,
+#fahrenheit,
+#pipe {
+  position: relative;
+  bottom: 7px;
+}
+
+.active {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+  cursor: default;
+}
+
+.active:hover {
+  color: rgb(33, 37, 41);
 }
 
 #description {

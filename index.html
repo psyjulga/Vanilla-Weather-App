@@ -40,7 +40,7 @@
             </div>
           </form>
           <div class="row">
-            <div class="col-3">
+            <div class="col-2">
               <img
               src="https://purepng.com/public/uploads/large/purepng.com-sunsunlightrayssolar-1411527180985a8mes.png"/
               alt="sunny" id="icon"/>
@@ -48,17 +48,20 @@
 
             <div class="col-5">
               <ul>
-                <li id="city-and-temp">
-                  <span id="city">Cologne</span>
-                  <span id="temp">15</span>
-                  °C|F
+                <li id="output-one">
+                  <span id="city-and-temp">
+                    <span id="city">Cologne</span>
+                    <span id="temp">15</span>°</span
+                  >
+                  <a href="#" id="celsius" class="active">C</a
+                  ><span id="pipe">|</span><a href="#" id="fahrenheit">F</a>
                 </li>
                 <li id="date">Sunday 16:24</li>
               </ul>
             </div>
 
-            <div class="col-4">
-              <ul>
+            <div class="col-5">
+              <ul id="output-two">
                 <li class="wind">Windspeed: <span id="wind">3</span>km/h</li>
                 <li class="humidity">
                   Humidity: <span id="humidity">55</span>%
@@ -68,9 +71,10 @@
             </div>
           </div>
         </div>
-        <footer class="mt-3">
-          <a href="#">Open-source</a> coded by Julia Bestgen
-        </footer>
+        <small>
+          <br />
+          <a href="#">Open-source</a> 🐞coded by Julia Bestgen💃
+        </small>
       </div>
     </div>
     <script src="src/app.js"></script>
