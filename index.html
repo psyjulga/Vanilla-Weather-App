@@ -14,7 +14,24 @@
     <link rel="stylesheet" href="src/style.css/" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <form id="search-form" class="mb-3">
+        <div class="row">
+          <div class="col-9">
+            <input
+              type="search"
+              placeholder="Type a city..."
+              class="form-control"
+              autocomplete="off"
+              id="city-input"
+            />
+          </div>
+          <div class="col-3">
+            <input type="submit" value="Search" class="btn btn-primary w-100" />
+          </div>
+        </div>
+      </form>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
