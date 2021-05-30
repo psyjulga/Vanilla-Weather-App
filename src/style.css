@@ -1,19 +1,19 @@
 body {
   background-color: rgb(203, 225, 238);
-  background-image: url(sunny.jpg);
+  background-image: url(sky.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
 
 .weather-app {
-  background-color: rgb(153, 209, 228);
-  border: 3px solid rgb(58, 171, 236);
+  background-color: rgba(110, 166, 250, 0.7);
+  border: 3px solid rgb(33, 37, 125);
   border-radius: 5px;
 }
 
 .weather-app-wrapper {
-  max-width: 500px;
-  margin: 50px auto;
+  max-width: 550px;
+  margin: 60px auto;
 }
 
 ul {
@@ -45,6 +45,10 @@ ul {
   bottom: 7px;
 }
 
+.link {
+  color: rgb(33, 37, 125);
+}
+
 .active {
   text-decoration: none;
   color: rgb(33, 37, 41);
@@ -57,4 +61,8 @@ ul {
 
 #description {
   text-transform: capitalize;
+}
+
+#github-link {
+  color: rgb(33, 37, 125);
 }
