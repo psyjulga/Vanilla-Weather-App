@@ -1,0 +1,24 @@
+.weather-app {
+  border: 2px solid rgb(58, 171, 236);
+  border-radius: 5px;
+}
+
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+#icon {
+  font-size: 65px;
+  position: relative;
+  left: 30px;
+  bottom: 10px;
+}
+
+#city {
+  font-size: 26px;
+}
