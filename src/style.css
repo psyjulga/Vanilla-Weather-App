@@ -6,7 +6,7 @@ body {
 }
 
 .weather-app {
-  background-color: rgba(110, 166, 250, 0.7);
+  background-color: rgba(135, 178, 243, 0.7);
   border: 3px solid rgb(33, 37, 125);
   border-radius: 5px;
 }
@@ -32,6 +32,7 @@ ul {
 
 #output-two {
   font-size: 15px;
+  padding: 0;
 }
 
 #city-and-temp {
