@@ -24,6 +24,10 @@ ul {
   bottom: 10px;
 }
 
-#city {
+#city-and-temp {
   font-size: 26px;
+}
+
+#description {
+  text-transform: capitalize;
 }

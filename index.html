@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla Weather App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,7 +13,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -46,16 +46,22 @@
 
             <div class="col-5">
               <ul>
-                <li id="city">Cologne 15°C|F</li>
-                <li>30.05.21 16:24</li>
+                <li id="city-and-temp">
+                  <span class="city" id="city">Cologne</span>
+                  <span class="temp" id="temp">15</span>
+                  °C|F
+                </li>
+                <li class="date" id="date">Sunday 16:24</li>
               </ul>
             </div>
 
             <div class="col-4">
               <ul>
-                <li>Windspeed: 3km/h</li>
-                <li>Humidity: 55%</li>
-                <li>Clear Sky</li>
+                <li class="wind">Windspeed: <span id="wind">3</span>km/h</li>
+                <li class="humidity">
+                  Humidity: <span id="humidity">55</span>%
+                </li>
+                <li class="description" id="description">Clear Sky</li>
               </ul>
             </div>
           </div>
