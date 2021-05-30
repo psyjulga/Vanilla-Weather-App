@@ -47,9 +47,20 @@ function displayTemp(response) {
     .setAttribute("alt", response.data.weather[0].description);
 }
 
-let city = "Paris";
-let unit = "metric";
-let apiKey = "521e636942417dbc233358cdf12445eb";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+function search(city) {
+  let unit = "metric";
+  let apiKey = "521e636942417dbc233358cdf12445eb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
-axios.get(apiUrl).then(displayTemp);
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  search(document.querySelector("#city-input").value);
+}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+search("Berlin");
