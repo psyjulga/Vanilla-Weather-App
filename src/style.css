@@ -18,10 +18,9 @@ ul {
 }
 
 #icon {
-  font-size: 65px;
+  width: 70px;
   position: relative;
   left: 30px;
-  bottom: 10px;
 }
 
 #city-and-temp {
