@@ -67,3 +67,17 @@ ul {
 #github-link {
   color: rgb(33, 37, 125);
 }
+
+.forecast-day,
+.forecast-temps {
+  text-align: center;
+}
+
+.forecast img {
+  position: relative;
+  left: 25px;
+}
+
+.temp-min {
+  opacity: 0.7;
+}
