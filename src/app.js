@@ -20,8 +20,12 @@ function displayForecast(response) {
          alt="weather-icon"
          width="14"/>
     <div class="forecast-temps">
-      <span class="temp-max">${Math.round(forecast.temp.max)}°</span>
-      <span class="temp-min">${Math.round(forecast.temp.min)}°</span>
+      <span class="temp-max"><span class="max">${Math.round(
+        forecast.temp.max
+      )}</span>°</span>
+      <span class="temp-min"><span class="min">${Math.round(
+        forecast.temp.min
+      )}</span>°</span>
     </div>
     </div>  
     `;
@@ -31,6 +35,8 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
 
   document.querySelector("#forecast").innerHTML = forecastHTML;
+
+  maxTemp = response.data.daily; // global variable // for conversion
 }
 
 function formatDate(timeStamp) {
@@ -106,9 +112,31 @@ function handleSubmit(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
+
   document.querySelector("#temp").innerHTML = Math.round(
     (celsiusTemp * 9) / 5 + 32
   );
+
+  // forecast
+
+  //let maxTempElements = document.querySelectorAll(".max"); //nodelist
+
+  /* maxTemp.forEach(function (data, index) {
+    // maxTemp = response.data.daily (array)
+    if (index < 6) {
+      [].forEach.call(maxTempElements, function (temp) {
+        temp.innerHTML = Math.round((data.temp.max * 9) / 5 + 32);
+      });
+    }
+  });*/
+
+  //maxTemp[0].temp.max = maxTempleElements[0].innerHTML; // nodelist nicht so anwählbar
+  //maxTemp[1].temp.max = maxTempleElements[1].innerHTML;
+  //maxTemp[2].temp.max = maxTempleElements[2].innerHTML;
+  //maxTemp[3].temp.max = maxTempleElements[3].innerHTML;
+  //maxTemp[4].temp.max = maxTempleElements[4].innerHTML;
+  //maxTemp[5].temp.max = maxTempleElements[5].innerHTML;
+
   document.querySelector("#celsius").classList.remove("active");
   document.querySelector("#fahrenheit").classList.add("active");
 }
@@ -121,6 +149,8 @@ function convertToCelsius(event) {
 }
 
 let celsiusTemp = null;
+let maxTemp = null;
+let minTemp = null;
 
 document.querySelector("#search-form").addEventListener("submit", handleSubmit);
 document
