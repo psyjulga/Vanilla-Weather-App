@@ -36,7 +36,7 @@ function displayForecast(response) {
 
   document.querySelector("#forecast").innerHTML = forecastHTML;
 
-  maxTemp = response.data.daily; // global variable // for conversion
+  maxMinTemp = response.data.daily; // global variable // for c/f conversion
 }
 
 function formatDate(timeStamp) {
@@ -117,25 +117,47 @@ function convertToFahrenheit(event) {
     (celsiusTemp * 9) / 5 + 32
   );
 
-  // forecast
+  let maxTempElements = document.querySelectorAll(".max"); // returns nodelist // similar to array
 
-  //let maxTempElements = document.querySelectorAll(".max"); //nodelist
+  maxTempElements[0].innerHTML = Math.round(
+    (maxMinTemp[0].temp.max * 9) / 5 + 32
+  );
+  maxTempElements[1].innerHTML = Math.round(
+    (maxMinTemp[1].temp.max * 9) / 5 + 32
+  );
+  maxTempElements[2].innerHTML = Math.round(
+    (maxMinTemp[2].temp.max * 9) / 5 + 32
+  );
+  maxTempElements[3].innerHTML = Math.round(
+    (maxMinTemp[3].temp.max * 9) / 5 + 32
+  );
+  maxTempElements[4].innerHTML = Math.round(
+    (maxMinTemp[4].temp.max * 9) / 5 + 32
+  );
+  maxTempElements[5].innerHTML = Math.round(
+    (maxMinTemp[5].temp.max * 9) / 5 + 32
+  );
 
-  /* maxTemp.forEach(function (data, index) {
-    // maxTemp = response.data.daily (array)
-    if (index < 6) {
-      [].forEach.call(maxTempElements, function (temp) {
-        temp.innerHTML = Math.round((data.temp.max * 9) / 5 + 32);
-      });
-    }
-  });*/
+  let minTempElements = document.querySelectorAll(".min");
 
-  //maxTemp[0].temp.max = maxTempleElements[0].innerHTML; // nodelist nicht so anwählbar
-  //maxTemp[1].temp.max = maxTempleElements[1].innerHTML;
-  //maxTemp[2].temp.max = maxTempleElements[2].innerHTML;
-  //maxTemp[3].temp.max = maxTempleElements[3].innerHTML;
-  //maxTemp[4].temp.max = maxTempleElements[4].innerHTML;
-  //maxTemp[5].temp.max = maxTempleElements[5].innerHTML;
+  minTempElements[0].innerHTML = Math.round(
+    (maxMinTemp[0].temp.min * 9) / 5 + 32
+  );
+  minTempElements[1].innerHTML = Math.round(
+    (maxMinTemp[1].temp.min * 9) / 5 + 32
+  );
+  minTempElements[2].innerHTML = Math.round(
+    (maxMinTemp[2].temp.min * 9) / 5 + 32
+  );
+  minTempElements[3].innerHTML = Math.round(
+    (maxMinTemp[3].temp.min * 9) / 5 + 32
+  );
+  minTempElements[4].innerHTML = Math.round(
+    (maxMinTemp[4].temp.min * 9) / 5 + 32
+  );
+  minTempElements[5].innerHTML = Math.round(
+    (maxMinTemp[5].temp.min * 9) / 5 + 32
+  );
 
   document.querySelector("#celsius").classList.remove("active");
   document.querySelector("#fahrenheit").classList.add("active");
@@ -144,13 +166,31 @@ function convertToFahrenheit(event) {
 function convertToCelsius(event) {
   event.preventDefault();
   document.querySelector("#temp").innerHTML = Math.round(celsiusTemp);
+
+  let maxTempElements = document.querySelectorAll(".max");
+
+  maxTempElements[0].innerHTML = Math.round(maxMinTemp[0].temp.max);
+  maxTempElements[1].innerHTML = Math.round(maxMinTemp[1].temp.max);
+  maxTempElements[2].innerHTML = Math.round(maxMinTemp[2].temp.max);
+  maxTempElements[3].innerHTML = Math.round(maxMinTemp[3].temp.max);
+  maxTempElements[4].innerHTML = Math.round(maxMinTemp[4].temp.max);
+  maxTempElements[5].innerHTML = Math.round(maxMinTemp[5].temp.max);
+
+  let minTempElements = document.querySelectorAll(".min");
+
+  minTempElements[0].innerHTML = Math.round(maxMinTemp[0].temp.min);
+  minTempElements[1].innerHTML = Math.round(maxMinTemp[1].temp.min);
+  minTempElements[2].innerHTML = Math.round(maxMinTemp[2].temp.min);
+  minTempElements[3].innerHTML = Math.round(maxMinTemp[3].temp.min);
+  minTempElements[4].innerHTML = Math.round(maxMinTemp[4].temp.min);
+  minTempElements[5].innerHTML = Math.round(maxMinTemp[5].temp.min);
+
   document.querySelector("#celsius").classList.add("active");
   document.querySelector("#fahrenheit").classList.remove("active");
 }
 
 let celsiusTemp = null;
-let maxTemp = null;
-let minTemp = null;
+let maxMinTemp = null;
 
 document.querySelector("#search-form").addEventListener("submit", handleSubmit);
 document
