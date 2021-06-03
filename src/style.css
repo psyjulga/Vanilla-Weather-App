@@ -7,7 +7,7 @@ body {
 
 .weather-app {
   background-color: rgba(135, 178, 243, 0.7);
-  border: 3px solid rgb(33, 37, 125);
+  border: 4px solid rgb(22, 26, 87);
   border-radius: 5px;
 }
 
@@ -21,18 +21,29 @@ ul {
 }
 
 #icon {
-  width: 70px;
+  width: 85px;
   position: relative;
   left: 20px;
+  bottom: 6px;
 }
 
 #output-one {
   font-weight: bold;
 }
 
+.output-two {
+  position: relative;
+  top: 5px;
+}
+
 #output-two {
   font-size: 15px;
   padding: 0;
+}
+
+.forecast-col {
+  position: relative;
+  bottom: 6px;
 }
 
 #city-and-temp {
@@ -47,7 +58,7 @@ ul {
 }
 
 .link {
-  color: rgb(33, 37, 125);
+  color: rgb(22, 26, 87);
 }
 
 .active {
@@ -65,7 +76,7 @@ ul {
 }
 
 #github-link {
-  color: rgb(33, 37, 125);
+  color: rgb(22, 26, 87);
 }
 
 .forecast-day,
@@ -75,7 +86,7 @@ ul {
 
 .forecast img {
   position: relative;
-  left: 25px;
+  left: 19px;
 }
 
 .temp-min {
